@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="vendors/metro4/css/metro-all.css">
+    <link rel="stylesheet" href="css/aistant.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <title>AiSTANT - Dashboard</title>
+
+    <script>
+        var panelCustomButtons = [
+            {
+                html: "<span class='mif-equalizer-v'></span>",
+                cls: "bg-transparent",
+                onclick: "alert('Goto settings')"
+            }
+        ];
+    </script>
+</head>
+<body class="m4-cloak h-vh-100 pt-0">
+
+<div data-role="navview" data-toggle="#paneToggle" data-expanded="xl" data-compact="lg" data-active-state="true">
+    <div class="navview-pane">
+        <div class="bg-brand d-flex flex-align-center">
+            <button class="pull-button m-0 bg-brand-hover">
+                <span class="mif-menu fg-white"></span>
+            </button>
+            <h2 class="text-light m-0 fg-white pl-7" style="line-height: 52px">AiSTANT</h2>
+        </div>
+
+        <div class="suggest-box">
+            <div class="data-box">
+                <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar">
+                <div class="ml-4 avatar-title flex-column">
+                    <a href="#" class="d-block fg-white text-medium no-decor"><span class="reduce-1">Sergey Pimenov</span></a>
+                    <p class="m-0"><span class="fg-green mr-2">&#x25cf;</span><span class="text-small">online</span></p>
+                </div>
+            </div>
+            <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar holder ml-2">
+        </div>
+
+        <div class="suggest-box">
+            <input type="text" data-role="input" data-clear-button="false" data-search-button="true">
+            <button class="holder">
+                <span class="mif-search fg-white"></span>
+            </button>
+        </div>
+
+        <ul class="navview-menu mt-4" id="side-menu">
+            <li>
+                <a href="/">
+                    <span class="icon"><span class="mif-home"></span></span>
+                    <span class="caption">Home</span>
+                </a>
+            </li>
+            <li class="item-header">KNOWLEDGE</li>
+            <li>
+                <a href="/articles">
+                    <span class="icon"><span class="mif-files-empty"></span></span>
+                    <span class="caption">Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <span class="icon"><span class="mif-tags"></span></span>
+                    <span class="caption">Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="/questions">
+                    <span class="icon"><span class="mif-question"></span></span>
+                    <span class="caption">Questions</span>
+                </a>
+            </li>
+            <li>
+                <a href="/files">
+                    <span class="icon"><span class="mif-file-image"></span></span>
+                    <span class="caption">Files/images</span>
+                </a>
+            </li>
+            <li>
+                <a href="/searches">
+                    <span class="icon"><span class="mif-search"></span></span>
+                    <span class="caption">Search requests</span>
+                </a>
+            </li>
+            <li>
+                <a href="/suggestions">
+                    <span class="icon"><span class="mif-chat-bubble"></span></span>
+                    <span class="caption">Suggestions</span>
+                </a>
+            </li>
+
+            <li class="item-header">KNOWLEDGE</li>
+            <li>
+                <a href="/kb">
+                    <span class="icon"><span class="mif-books"></span></span>
+                    <span class="caption">Knowledge bases</span>
+                </a>
+            </li>
+            <li>
+                <a href="/users">
+                    <span class="icon"><span class="mif-users"></span></span>
+                    <span class="caption">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="/settings">
+                    <span class="icon"><span class="mif-cog"></span></span>
+                    <span class="caption">Settings</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="w-100 text-center text-small data-box p-2 border-top bd-grayMouse" style="position: absolute; bottom: 0">
+            <div>&copy; 2019 <a href="mailto:support@aistant.com" class="text-muted fg-white-hover no-decor">AiSTANT.com</a></div>
+            <div>Created with <a href="https://metroui.org.ua" class="text-muted fg-white-hover no-decor">Metro 4</a></div>
+        </div>
+    </div>
+
+    <div class="navview-content h-100">
+        <div data-role="appbar" class="pos-absolute bg-brand-hr">
+
+            <a href="#" class="app-bar-item d-block d-none-lg" id="paneToggle"><span class="mif-menu"></span></a>
+
+            <div class="app-bar-container ml-auto">
+                <a href="#" class="app-bar-item">
+                    <span class="mif-envelop"></span>
+                    <span class="badge bg-green fg-white mt-2 mr-1">4</span>
+                </a>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-bell"></span>
+                    <span class="badge bg-orange fg-white mt-2 mr-1">10</span>
+                </a>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-flag"></span>
+                    <span class="badge bg-red fg-white mt-2 mr-1">9</span>
+                </a>
+                <div class="app-bar-container">
+                    <a href="#" class="app-bar-item dropdown-toggle">
+                        <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar">
+                        <span class="ml-2 app-bar-name">Sergey Pimenov</span>
+                    </a>
+                    <div class="user-block shadow-1" data-role="collapse" data-collapsed="true">
+                        <div class="bg-brand fg-white p-2 text-center">
+                            <img data-role="gravatar" data-email="sergey@pimenov.com.ua" data-size="120" class="avatar">
+                            <div class="h4 mb-0">Sergey Pimenov</div>
+                            <div>Cool Programmer</div>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2">
+                            <button class="button flat-button">Followers</button>
+                            <button class="button flat-button">Sales</button>
+                            <button class="button flat-button">Friends</button>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2 bg-light">
+                            <button class="button mr-1">Profile</button>
+                            <button class="button ml-1">Sign out</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-cogs"></span>
+                </a>
+            </div>
+        </div>
+
+        <div id="content-wrapper" class="content-inner h-100 pl-4 pr-4 pt-2" style="overflow-y: auto">
+            <div class="row">
+                <div class="cell-md-6">
+                    <div data-role="panel" data-cls-panel="h-100" data-cls-content="p-4 reduce-1"
+                         data-title-caption="Knowledge base: Metro 4 Query"
+                         data-title-icon="<span class='mif-books'></span>"
+                         data-custom-buttons="panelCustomButtons"
+                    >
+                        <div>
+                            <h5>Public URL:</h5>
+                            <a class="d-block text-ellipsis" href="https://pimenov.aistant.com/metro-4-query">https://pimenov.aistant.com/metro-4-query</a>
+                        </div>
+
+                        <div>
+                            <h5>Recently modified articles:</h5>
+                            <ul>
+                                <li><a href="#">Constructor</a></li>
+                                <li><a href="#">Introduction</a></li>
+                                <li><a href="#">Ajax routines</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell-md-6">
+                    <div data-role="panel" data-cls-panel="h-100" data-cls-content="p-4 reduce-1"
+                         data-title-caption="Latest searches"
+                         data-title-icon="<span class='mif-search'></span>"
+                         data-custom-buttons="panelCustomButtons"
+                    >
+                        <div>
+                            <ul>
+                                <li><a href="#">each</a></li>
+                                <li><a href="#">addClass</a></li>
+                                <li><a href="#">Ajax</a></li>
+                            </ul>
+                            <hr/>
+                            <button class="button">Clear search history</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell-md-6">
+                    <div data-role="panel" data-cls-panel="h-100" data-cls-content="p-4 reduce-1"
+                         data-title-caption="Help &amp; support"
+                         data-title-icon="<span class='mif-help'></span>"
+                    >
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Getting started</a></li>
+                            <li><a href="#">Contact/Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cell-md-6">
+                    <div data-role="panel" data-cls-panel="h-100" data-cls-content="p-4 reduce-1"
+                         data-title-caption="Administrative"
+                         data-title-icon="<span class='mif-cogs'></span>"
+                    >
+                        <div>
+                            <ul>
+                                <li><a href="#">Team settings</a></li>
+                                <li><a href="#">Knowledge bases</a></li>
+                                <li><a href="#">Manage users</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="vendors/metro4/js/metro.js"></script>
+</body>
+</html>

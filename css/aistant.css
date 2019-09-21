@@ -13,6 +13,9 @@
 .fg-brand {
   color: #18C29C !important;
 }
+.bg-brand-hover:hover {
+  background-color: #02604b !important;
+}
 body {
   padding-top: 52px;
 }

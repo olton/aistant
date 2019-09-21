@@ -1,0 +1,101 @@
+body {
+  background-color: #ECF0F5;
+}
+.navview .navview-pane {
+  background-color: #222D32;
+  color: #b8c7ce;
+  font-size: 14px;
+}
+.navview .navview-content {
+  padding-top: 52px;
+  background-color: #ECF0F5;
+}
+.navview .pull-button {
+  height: 52px;
+  width: 52px;
+}
+.navview .navview-menu {
+  background-color: #222D32;
+}
+.navview .navview-menu li a:hover {
+  color: #fff;
+  background: #1e282c;
+}
+.navview .navview-menu li.active a {
+  color: #fff;
+  background: #1e282c;
+}
+.navview .navview-menu .dropdown-toggle::after {
+  border-bottom-color: white;
+}
+.navview .navview-menu .item-header {
+  color: #4b646f;
+  background: #1a2226;
+  font-size: 12px;
+}
+.navview .suggest-box .holder:hover {
+  color: #fff;
+  background: #1e282c;
+}
+.navview .suggest-box .data-box {
+  display: flex;
+  padding: 0 8px;
+}
+.navview .suggest-box img.holder {
+  width: 32px!important;
+  height: auto!important;
+}
+.navview .navview-menu .navview-menu {
+  background-color: #1a2226;
+}
+.avatar-title {
+  line-height: 1.2;
+}
+.navview .pull-button + h2,
+.navview.compacted .pull-button + h2 {
+  display: none;
+}
+.navview.expand .pull-button + h2,
+.navview-pane.open .pull-button + h2 {
+  display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .navview .pull-button + h2 {
+    display: flex;
+  }
+}
+.navview-pane .avatar,
+.app-bar .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.app-bar-name {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .app-bar-name {
+    display: inline;
+  }
+}
+.user-block {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  line-height: 1.2;
+}
+.user-block .avatar {
+  width: 128px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.user-block .avatar img {
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=dashboard.css.map */
