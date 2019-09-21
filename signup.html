@@ -26,47 +26,62 @@
     </div>
 
     <main>
-        <div class="container p-4 p-20-md d-flex flex-justify-center">
-            <form data-role="validator" data-clear-invalid="3000" class="login-form">
-                <h1>Sign Up</h1>
-                <h5 class="text-muted">It's free! No credit card required!</h5>
-                <hr>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" data-role="input" data-prepend="<span class='mif-envelop'>" data-validate="required email">
-                    <span class="invalid_feedback">Email required or user with the specified email already exists</span>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" data-role="input" data-prepend="<span class='mif-lock'>" data-validate="required minlength=8">
-                    <span class="invalid_feedback">Password required and min length must be 8 symbols</span>
-                </div>
-                <div class="form-group">
-                    <label>You name</label>
-                    <input type="text" data-role="input" data-prepend="<span class='mif-user'>" placeholder="e.g. John Smith">
-                </div>
-                <div class="form-group">
-                    <label>Subdomain</label>
-                    <input type="text" data-role="input" data-prepend="<span class='mif-earth'>" data-validate="required" data-append=".aistant.com">
-                    <span class="invalid_feedback">Domain name required</span>
-                    <div class="text-muted text-small">Every subscriber gets a subdomain to publish their documentation. You can choose your name here (if it's not taken yet, of course)</div>
-                </div>
-                <div class="mt-10 form-actions d-flex flex-column flex-justify-center flex-align-center">
-                    <button class="button large bg-brand fg-white shadow-1">Create your account</button>
-                    <div class="mt-6 text-center">
-                        By signing up you agree to our <a href="#" class="fg-brand">privacy policy</a> and <a href="#" class="fg-brand">T&Cs</a>
+        <div class="container-fluid p-4 p-20-md d-flex flex-justify-center bg-brand">
+            <div class="container">
+                <div class="row">
+                    <div class="cell-md-5 d-flex flex-column flex-justify-center flex-align-center">
+                        <div class="text-center">
+                            <span class="mif-user mif-10x fg-white"></span>
+                            <h1 class="fg-white">Sign Up</h1>
+                            <h5 class="fg-white">It's free! No credit card required!</h5>
+                        </div>
+
+                        <br>
+
                     </div>
-                    <div class="mt-4 text-center">
-                        Already have an account? <a href="login.html" class="fg-brand">Log in</a>
+
+                    <div class="cell-md-2 d-flex flex-justify-center">
+                        <div style="width: 1px;" class="d-none d-block-md bg-brand-hr h-100"></div>
+                    </div>
+
+                    <div class="cell-md-5">
+                        <form data-role="validator" data-clear-invalid="3000" class="login-form">
+                            <div class="form-group">
+                                <input class="input-large" placeholder="Your email" type="text" data-role="input" data-prepend="<span class='mif-envelop mif-3x va-middle fg-brand pt-1'>" data-validate="required email">
+                                <span class="invalid_feedback">Email required or user with the specified email already exists</span>
+                            </div>
+                            <div class="form-group">
+                                <input class="input-large" placeholder="******"  type="password" data-role="input" data-prepend="<span class='mif-lock mif-3x va-middle fg-brand pt-1'>" data-validate="required minlength=8">
+                                <span class="invalid_feedback">Password required and min length must be 8 symbols</span>
+                            </div>
+                            <div class="form-group">
+                                <input class="input-large" placeholder="Your name"  type="text" data-role="input" data-prepend="<span class='mif-user mif-3x va-middle fg-brand pt-1'>" placeholder="e.g. John Smith">
+                            </div>
+                            <div class="form-group">
+                                <input class="input-large" placeholder="Sub domain"  type="text" data-role="input" data-prepend="<span class='mif-earth mif-3x va-middle fg-brand pt-1'>" data-validate="required" data-append=".aistant.com">
+                                <span class="invalid_feedback">Domain name required</span>
+                                <div class="text-muted text-small fg-white">Every subscriber gets a subdomain to publish their documentation. You can choose your name here (if it's not taken yet, of course)</div>
+                            </div>
+                            <div class="mt-10 form-actions d-flex flex-column flex-justify-center flex-align-center">
+                                <button class="button large bg-brand fg-white outline">Create your account</button>
+                                <br>
+                                <div class="mt-2 text-center">
+                                    By signing up you agree to our <a href="#" class="fg-white">privacy policy</a> and <a href="#" class="fg-white">T&Cs</a>
+                                </div>
+                                <div class="mt-1 text-center">
+                                    Already have an account? <a href="login.html" class="fg-white">Log in</a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     </main>
 
 
     <footer>
-        <div class="container pt-20 pb-20">
+        <div class="container pt-10 pb-10">
             <div class="text-center">
                 <ul class="inline-list reduce-1" id="social-menu">
                     <li><a href="#"><span class="mif-facebook"></span></a></li>
