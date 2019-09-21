@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="vendors/metro4/css/metro-all.css">
+    <link rel="stylesheet" href="css/aistant.css">
+
+    <title>AiSTANT - Login to Aistant</title>
+</head>
+<body class="m4-cloak">
+    <div class="container-fluid bg-brand fg-white pos-fixed fixed-top z-top">
+        <header data-role="appbar" class="container pos-relative bg-brand fg-white" data-expand-point="md">
+            <a href="index.html" class="brand no-hover">AiSTANT</a>
+
+            <ul class="app-bar-menu ml-auto">
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="#" class="text-bold fg-yellow"><span class="d-block ani-vertical">Get started</span></a></li>
+            </ul>
+        </header>
+    </div>
+
+    <main>
+        <div class="container p-4 p-20-md d-flex flex-justify-center">
+            <form data-role="validator" data-clear-invalid="3000" class="login-form">
+                <h1>Sign In</h1>
+                <hr>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" data-role="input" data-prepend="<span class='mif-envelop'>" data-validate="required email">
+                    <span class="invalid_feedback">Email required</span>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" data-role="input" data-prepend="<span class='mif-lock'>" data-validate="required minlength=8">
+                    <span class="invalid_feedback">Password required</span>
+                </div>
+                <div class="mt-10 form-actions d-flex flex-column flex-justify-center flex-align-center">
+                    <button class="button large bg-brand fg-white shadow-1">Sign In to Aistant</button>
+                    <div class="mt-4 text-center">
+                        Don't have an account? <a href="signup.html" class="fg-brand">Register it now</a>
+                    </div>
+                    <div class="mt-4 text-center">
+                        Forgot your password? <a href="#" class="fg-brand">Reset it</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container pt-20 pb-20">
+            <div class="text-center">
+                <ul class="inline-list reduce-1" id="social-menu">
+                    <li><a href="#"><span class="mif-facebook"></span></a></li>
+                    <li><a href="#"><span class="mif-twitter"></span></a></li>
+                    <li><a href="#"><span class="mif-youtube"></span></a></li>
+                    <li><a href="#"><span class="mif-github"></span></a></li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-10">
+                <ul class="inline-list reduce-1" id="footer-menu">
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="subscriptions.html">Subscriptions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-10 reduce-1">
+                &copy; 2018-2019 by <a href="#" class="no-wrap">AiSTANT.COM</a>
+                <br>
+                <small>Version <span class="text-bold">2019.1</span></small>
+                <br>
+                Created with <a href="https://metroui.org.ua">Metro 4</a>
+            </div>
+        </div>
+    </footer>
+<script src="vendors/metro4/js/metro.js"></script>
+</body>
+</html>
