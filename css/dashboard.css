@@ -122,4 +122,10 @@ body {
   min-height: 100%;
   background-color: #fff;
 }
+.treeview li .caption {
+  padding: 4px 8px;
+}
+.treeview .current > .caption {
+  background-color: lightblue;
+}
 /*# sourceMappingURL=dashboard.css.map */
