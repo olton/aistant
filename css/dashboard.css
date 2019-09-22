@@ -1,3 +1,6 @@
+.bg-app-bar {
+  background-color: #4b646f;
+}
 body {
   background-color: #ECF0F5;
 }
@@ -59,7 +62,7 @@ body {
 .navview-pane.open .pull-button + h2 {
   display: flex;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .navview .pull-button + h2 {
     display: flex;
   }

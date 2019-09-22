@@ -1,4 +1,5 @@
 @brand-color: #18C29C;
+@brand-color-light: #18e1bb;
 @hr-color: #7cffdd;
 @brand-color-secondary: #EEF9F4;
 @item-color: #031727;
@@ -9,6 +10,9 @@
 }
 .bg-brand {
     background-color: @brand-color!important;
+}
+.bg-brand-light {
+    background-color: @brand-color-light!important;
 }
 .bg-brand-hr {
     background-color: @hr-color!important;
@@ -40,13 +44,7 @@ body {
 
 .hero-bg {
     background: @brand-color;
-    background: -moz-linear-gradient(top, @brand-color 0%, @brand-color-secondary 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, @brand-color), color-stop(100%, @brand-color-secondary));
-    background: -webkit-linear-gradient(top, @brand-color 0%, @brand-color-secondary 100%);
-    background: -o-linear-gradient(top, @brand-color 0%, @brand-color-secondary 100%);
-    background: -ms-linear-gradient(top, @brand-color 0%, @brand-color-secondary 100%);
     background: linear-gradient(to bottom, @brand-color 0%, @brand-color-secondary 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18C29C', endColorstr='#EEF9F4', GradientType=0 );
 }
 
 .hero {

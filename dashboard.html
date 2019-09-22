@@ -44,7 +44,7 @@
             <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar holder ml-2">
         </div>
 
-        <div class="suggest-box">
+        <div class="suggest-box mt-4">
             <input type="text" data-role="input" data-clear-button="false" data-search-button="true">
             <button class="holder">
                 <span class="mif-search fg-white"></span>
@@ -124,27 +124,21 @@
     </div>
 
     <div class="navview-content h-100">
-        <div data-role="appbar" class="pos-absolute bg-brand-hr">
+        <div data-role="appbar" class="pos-absolute bg-brand-light">
 
             <a href="#" class="app-bar-item d-block d-none-lg" id="paneToggle"><span class="mif-menu"></span></a>
 
+            <div class="app-bar-container ml-2" style="width: 200px">
+                <select data-role="select" data-filter="false">
+                    <option value="metro-4-query" data-template="<span class='mif-books icon'></span> $1">Metro 4 Query</option>
+                </select>
+            </div>
+
             <div class="app-bar-container ml-auto">
-                <a href="#" class="app-bar-item">
-                    <span class="mif-envelop"></span>
-                    <span class="badge bg-green fg-white mt-2 mr-1">4</span>
-                </a>
-                <a href="#" class="app-bar-item">
-                    <span class="mif-bell"></span>
-                    <span class="badge bg-orange fg-white mt-2 mr-1">10</span>
-                </a>
-                <a href="#" class="app-bar-item">
-                    <span class="mif-flag"></span>
-                    <span class="badge bg-red fg-white mt-2 mr-1">9</span>
-                </a>
                 <div class="app-bar-container">
-                    <a href="#" class="app-bar-item dropdown-toggle">
+                    <a href="#" class="app-bar-item dropdown-toggle marker-light">
                         <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar">
-                        <span class="ml-2 app-bar-name">Sergey Pimenov</span>
+                        <span class="ml-2 app-bar-name fg-white">Sergey Pimenov</span>
                     </a>
                     <div class="user-block shadow-1" data-role="collapse" data-collapsed="true">
                         <div class="bg-brand fg-white p-2 text-center">
@@ -163,9 +157,6 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="app-bar-item">
-                    <span class="mif-cogs"></span>
-                </a>
             </div>
         </div>
 

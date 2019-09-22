@@ -4,6 +4,9 @@
 .bg-brand {
   background-color: #18C29C !important;
 }
+.bg-brand-light {
+  background-color: #18e1bb !important;
+}
 .bg-brand-hr {
   background-color: #7cffdd !important;
 }
@@ -27,13 +30,7 @@ body {
 }
 .hero-bg {
   background: #18C29C;
-  background: -moz-linear-gradient(top, #18C29C 0%, #EEF9F4 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #18C29C), color-stop(100%, #EEF9F4));
-  background: -webkit-linear-gradient(top, #18C29C 0%, #EEF9F4 100%);
-  background: -o-linear-gradient(top, #18C29C 0%, #EEF9F4 100%);
-  background: -ms-linear-gradient(top, #18C29C 0%, #EEF9F4 100%);
   background: linear-gradient(to bottom, #18C29C 0%, #EEF9F4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#18C29C', endColorstr='#EEF9F4', GradientType=0);
 }
 .hero {
   padding: 40px;
