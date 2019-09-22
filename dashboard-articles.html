@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="vendors/metro4/css/metro-all.css">
+    <link rel="stylesheet" href="css/aistant.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <title>AiSTANT - Dashboard</title>
+
+    <script>
+        var panelCustomButtons = [
+            {
+                html: "<span class='mif-equalizer-v'></span>",
+                cls: "bg-transparent fg-white",
+                onclick: "alert('Goto settings')"
+            }
+        ];
+    </script>
+</head>
+<body class="m4-cloak h-vh-100 pt-0">
+
+<div data-role="navview" data-toggle="#paneToggle" data-expanded="xl" data-compact="lg" data-active-state="true">
+    <div class="navview-pane">
+        <div class="bg-brand d-flex flex-align-center">
+            <button class="pull-button m-0 bg-brand-hover">
+                <span class="mif-menu fg-white"></span>
+            </button>
+            <h2 class="text-light m-0 fg-white pl-7" style="line-height: 52px">AiSTANT</h2>
+        </div>
+
+        <div class="suggest-box">
+            <div class="data-box">
+                <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar">
+                <div class="ml-4 avatar-title flex-column">
+                    <a href="#" class="d-block fg-white text-medium no-decor"><span class="reduce-1">Sergey Pimenov</span></a>
+                    <p class="m-0"><span class="fg-green mr-2">&#x25cf;</span><span class="text-small">online</span></p>
+                </div>
+            </div>
+            <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar holder ml-2">
+        </div>
+
+        <div class="suggest-box mt-4">
+            <input type="text" data-role="input" data-clear-button="false" data-search-button="true">
+            <button class="holder">
+                <span class="mif-search fg-white"></span>
+            </button>
+        </div>
+
+        <ul class="navview-menu mt-4" id="side-menu">
+            <li>
+                <a href="/">
+                    <span class="icon"><span class="mif-home"></span></span>
+                    <span class="caption">Home</span>
+                </a>
+            </li>
+            <li class="item-header">KNOWLEDGE</li>
+            <li class="active">
+                <a href="/articles">
+                    <span class="icon"><span class="mif-files-empty"></span></span>
+                    <span class="caption">Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <span class="icon"><span class="mif-tags"></span></span>
+                    <span class="caption">Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="/questions">
+                    <span class="icon"><span class="mif-question"></span></span>
+                    <span class="caption">Questions</span>
+                </a>
+            </li>
+            <li>
+                <a href="/files">
+                    <span class="icon"><span class="mif-file-image"></span></span>
+                    <span class="caption">Files/images</span>
+                </a>
+            </li>
+            <li>
+                <a href="/searches">
+                    <span class="icon"><span class="mif-search"></span></span>
+                    <span class="caption">Search requests</span>
+                </a>
+            </li>
+            <li>
+                <a href="/suggestions">
+                    <span class="icon"><span class="mif-chat-bubble"></span></span>
+                    <span class="caption">Suggestions</span>
+                </a>
+            </li>
+
+            <li class="item-header">KNOWLEDGE</li>
+            <li>
+                <a href="/kb">
+                    <span class="icon"><span class="mif-books"></span></span>
+                    <span class="caption">Knowledge bases</span>
+                </a>
+            </li>
+            <li>
+                <a href="/users">
+                    <span class="icon"><span class="mif-users"></span></span>
+                    <span class="caption">Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="/settings">
+                    <span class="icon"><span class="mif-cog"></span></span>
+                    <span class="caption">Settings</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="w-100 text-center text-small data-box p-2 border-top bd-grayMouse" style="position: absolute; bottom: 0">
+            <div>&copy; 2019 <a href="mailto:support@aistant.com" class="text-muted fg-white-hover no-decor">AiSTANT.com</a></div>
+            <div>Created with <a href="https://metroui.org.ua" class="text-muted fg-white-hover no-decor">Metro 4</a></div>
+        </div>
+    </div>
+
+    <div class="navview-content h-100">
+        <div data-role="appbar" class="pos-absolute bg-brand-light">
+
+            <a href="#" class="app-bar-item d-block d-none-lg" id="paneToggle"><span class="mif-menu"></span></a>
+
+            <div class="app-bar-container ml-2" id="select-kb">
+                <select data-role="select" data-filter="false">
+                    <option value="metro-4-query" data-template="<span class='mif-books icon'></span> $1">Metro 4 Query</option>
+                </select>
+            </div>
+
+            <div class="app-bar-container ml-auto">
+                <div class="app-bar-container">
+                    <a href="#" class="app-bar-item dropdown-toggle marker-light">
+                        <img data-role="gravatar" data-email="sergey@pimenov.com.ua" class="avatar">
+                        <span class="ml-2 app-bar-name fg-white">Sergey Pimenov</span>
+                    </a>
+                    <div class="user-block shadow-1" data-role="collapse" data-collapsed="true">
+                        <div class="bg-brand fg-white p-2 text-center">
+                            <img data-role="gravatar" data-email="sergey@pimenov.com.ua" data-size="120" class="avatar">
+                            <div class="h4 mb-0">Sergey Pimenov</div>
+                            <div>Cool Programmer</div>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2">
+                            <button class="button flat-button">Followers</button>
+                            <button class="button flat-button">Sales</button>
+                            <button class="button flat-button">Friends</button>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2 bg-light">
+                            <button class="button mr-1">Profile</button>
+                            <button class="button ml-1">Sign out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-wrapper" class="content-inner h-100" style="overflow-y: auto; overflow-x: hidden;">
+            <div class="toolbar-wrapper bg-light">
+                <div class="toolbar vertical">
+                    <button class="tool-button info" data-role="hint" data-hint-position="right" data-hint-text="All articles">
+                        <span class="mif-files-empty"></span>
+                    </button>
+                    <button class="tool-button warning" data-role="hint" data-hint-position="right" data-hint-text="Drafts">
+                        <span class="mif-assignment"></span>
+                    </button>
+                    <button class="tool-button success" data-role="hint" data-hint-position="right" data-hint-text="Published">
+                        <span class="mif-earth"></span>
+                    </button>
+                    <button class="tool-button alert" data-role="hint" data-hint-position="right" data-hint-text="Deleted">
+                        <span class="mif-bin"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class=" h-100 mb-0" style="margin-left: 54px; width: calc(100% - 54px)">
+                <div class="row h-100">
+                    <div class="stub bg-white border-right bd-default" style="width: 200px;">
+                        <ul data-role="treeview" data-show-child-count="true">
+                            <li data-caption="Metro 4 Query" id="tree-root">
+                                <ul>
+                                    <li data-caption="General">
+                                        <ul>
+                                            <li data-caption="Introduction"></li>
+                                            <li data-caption="Population"></li>
+                                            <li data-caption="Constructor"></li>
+                                        </ul>
+                                    </li>
+                                    <li data-caption="Ajax">
+                                        <ul>
+                                            <li data-caption="Ajax routines"></li>
+                                        </ul>
+                                    </li>
+                                    <li data-caption="Manipulation">
+                                        <ul>
+                                            <li data-caption="Visibility"></li>
+                                            <li data-caption="Attributes"></li>
+                                            <li data-caption="Subtree"></li>
+                                            <li data-caption="Html, text, value"></li>
+                                            <li data-caption="Css, classes"></li>
+                                            <li data-caption="Position, size"></li>
+                                            <li data-caption="Add, remove, clone"></li>
+                                        </ul>
+                                    </li>
+                                    <li data-caption="Events">
+                                        <ul>
+                                            <li data-caption="Events handling"></li>
+                                        </ul>
+                                    </li>
+                                    <li data-caption="Animation">
+                                        <ul>
+                                            <li data-caption="Animation"></li>
+                                            <li data-caption="Effects"></li>
+                                        </ul>
+                                    </li>
+                                    <li data-caption="Utilities">
+                                        <ul>
+                                            <li data-caption="Loops"></li>
+                                            <li data-caption="Useful functions"></li>
+                                            <li data-caption="DataSet"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cell p-0">
+                        <div class="h-100 bg-white">
+                            <div class="row m-0 h-100">
+                                <div class="cell bg-light p-4">
+                                    <div class="p-4 bg-white shadow-1 h-100">
+                                        <h1>What is Lorem Ipsum?</h1>
+
+                                        <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+
+                                        <h2>Why do we use it?</h2>
+                                        <p>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="stub p-0" style="width: 200px">
+                                    <div class="h-100 p-2 reduce-3  border-left bd-default">
+                                        <ul data-role="tabs" data-expand="true">
+                                            <li><a href="#">ACTUAL</a></li>
+                                            <li><a href="#">HISTORY</a></li>
+                                        </ul>
+                                        <div class="tabs-content p-1">
+                                            <div id="tab-actual">
+                                                <div>
+                                                    <h5 class="text-muted">Published</h5>
+                                                    <a href="" class="no-decor border-bottom border-dashed bd-cyan">#3, 2 days ago</a>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <ul class="unstyled-list">
+                                                        <li><a href="" class="no-decor border-bottom bd-cyan"><span class="mif-link"></span> Permalink</a></li>
+                                                        <li><a href="" class="no-decor border-bottom bd-cyan"><span class="mif-pencil"></span> Edit</a></li>
+                                                    </ul>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <ul class="unstyled-list">
+                                                        <li><a href="" class="no-decor border-bottom bd-cyan"><span class="mif-cancel"></span> Hide</a></li>
+                                                        <li><a href="" class="no-decor border-bottom bd-cyan"><span class="mif-bin"></span> Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <h5 class="text-muted">Tags</h5>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <h5 class="text-muted">Questions</h5>
+                                                </div>
+                                            </div>
+                                            <div id="tab-history"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="vendors/metro4/js/metro.js"></script>
+</body>
+</html>
