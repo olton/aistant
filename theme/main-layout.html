@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Metro 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.0/css/metro-all.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+
+    <title>{{PAGE-TITLE}}</title>
+    {{HEAD-CHUNK}}
+    {{DEFAULT-STYLES}}
+
+    <style>
+
+    </style>
+</head>
+
+<body class="m4-cloak" style="padding-top: 52px">
+
+<div class="container-fluid bg-aistant fg-white pos-fixed fixed-top z-top">
+    <header data-role="appbar" data-expand-point="md" class="pos-relative bg-aistant fg-white ">
+        <a href="#" class="brand no-hover">{{KB-TITLE}}</a>
+
+        <ul class="app-bar-menu ml-auto">
+            <li><a href="/">Home</a></li>
+            <li><a href="https://github.com/olton/m4q/issues">Issues</a></li>
+            <li><a href="https://metroui.org.ua">Metro 4</a></li>
+            <li><a href="https://github.com/olton/m4q">Github</a></li>
+        </ul>
+    </header>
+</div>
+
+<div class="container-fluid mt-4">
+    <div class="">
+        <div class="row">
+            <div class="cell-lg-8" id="breadcrumbs-container">
+                {{TOC-OPEN-BTN}}
+                <ol class="aist-breadcrumbs breadcrumbs m-0">
+                    {{BREADCRUMBS}}
+                </ol>
+            </div>
+            <div class="cell-lg-4" id="searchbar-container">
+                <form action="javascript:" onsubmit="searchFormSubmit(this)">
+                    <input id="aist-search-input"
+                           data-role="input"
+                           placeholder="Search..."
+                           data-search-button="true"
+                           data-baseurl="/metro-4-query/">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div id="main-content" class="container-fluid">
+    <div class="content-block">
+        {{CONTENT}}
+    </div>
+</div>
+
+<footer class="container-fluid d-none">
+    <div class="container pt-10 pb-10">
+        <div class="text-center">
+            <ul class="inline-list reduce-1" id="social-menu">
+                <li><a href="#"><span class="mif-facebook"></span></a></li>
+                <li><a href="#"><span class="mif-twitter"></span></a></li>
+                <li><a href="#"><span class="mif-youtube"></span></a></li>
+                <li><a href="#"><span class="mif-github"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-10">
+            <ul class="inline-list reduce-1" id="footer-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-10 reduce-1">
+            &copy; 2019 by <a href="#" class="no-wrap">Copyrighter</a>
+            <br>
+            <small>Version <span class="text-bold">1.0.0</span></small>
+            <br>
+            Theme created with <a href="https://metroui.org.ua" class="no-wrap fg-white">Metro 4</a>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.metroui.org.ua/v4.3.0/js/metro.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script>
+    $.each($("pre"), function(){
+        var pre = $(this);
+        pre.prepend($("<button>").addClass("button square copy-button rounded").attr("title", "Copy").html("<span class='mif-copy'></span>"));
+    });
+
+    hljs.initHighlightingOnLoad();
+
+    Metro.utils.cleanPreCode("pre code, textarea");
+
+    new ClipboardJS('.copy-button', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+
+    function searchFormSubmit(f){
+        var action = "https://pimenov.aistant.com/metro-4-query/$s/";
+        var searchVal = f.elements[0].value;
+        $(f).attr("action", action + searchVal);
+    }
+</script>
+</body>
+
+</html>
