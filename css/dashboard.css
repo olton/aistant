@@ -1,6 +1,9 @@
 .bg-app-bar {
   background-color: #4b646f;
 }
+.content-hr {
+  background-color: #d8dce1;
+}
 body {
   background-color: #ECF0F5;
 }
