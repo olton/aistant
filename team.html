@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Metro 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.0/css/metro-all.css">
+
+
+    <title>{{DOC-TITLE}}</title>
+
+    {{HEAD-CHUNK}}
+    {{DEFAULT-STYLES}}
+
+    <style>
+        :root {
+            --brand-color: #18C29C;
+            --brand-color-hr: #7cffdd;
+            --brand-color-secondary: #EEF9F4;
+            --brand-color-hover: #02604b;
+            --brand-color-border: #c8faed;
+        }
+        .bd-brand {
+            border-color: var(--brand-color) !important;
+        }
+        .bg-brand {
+            background-color: var(--brand-color) !important;
+        }
+        .bg-brand-hr {
+            background-color: var(--brand-color-hr) !important;
+        }
+        .bg-brand-secondary {
+            background-color: var(--brand-color-secondary) !important;
+        }
+        .fg-brand {
+            color: var(--brand-color) !important;
+        }
+        .bg-brand-hover:hover {
+            background-color: var(--brand-color-hover) !important;
+        }
+        body {
+            padding-top: 52px;
+        }
+        .container {
+            max-width: 1160px;
+        }
+        .app-bar .brand {
+            font-size: 30px;
+        }
+        .hero-bg {
+            background: var(--branch-color);
+            background: linear-gradient(to bottom, var(--brand-color) 0%, var(--brand-color-secondary) 100%);
+        }
+        .hero {
+            padding: 40px;
+        }
+        .add-neb::after {
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 24px 24px 0 24px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .hero.add-neb::after {
+            border-color: var(--brand-color-secondary) transparent transparent transparent;
+        }
+        .about.add-neb::after,
+        .table-price.add-neb::after {
+            border-color: #ffffff transparent transparent transparent;
+        }
+        footer {
+            background-color: #031727;
+            color: #909090;
+        }
+        footer a {
+            color: #909090;
+            text-decoration: none!important;
+        }
+        footer a:hover {
+            color: #c9c9c9;
+        }
+        .input {
+            border-color: var(--brand-color-border);
+        }
+        .input:hover {
+            border-color: var(--brand-color);
+        }
+        .input.focused {
+            box-shadow: 0 0 0 3px rgba(24, 194, 156, 0.45);
+            border-color: var(--brand-color);
+        }
+
+        .aist-kb-item-container {
+            width: 300px;
+            border: 1px solid var(--brand-color-border);
+            margin-bottom: 10px;
+        }
+
+        #searchbar-container {
+            width: 300px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .aist-kb-item-container, #searchbar-container {
+                width: 640px;
+            }
+        }
+
+        .aist-kb-item-block {
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .aist-kb-item-icon {
+            position: absolute;
+            width: 34px;
+            top: 0;
+            left: 10px;
+        }
+
+        .aist-kb-item-content {
+            margin-left: 48px;
+        }
+
+        .aist-kb-item-content a {
+            text-decoration: none;
+        }
+
+        .aist-kb-item-content h2 {
+            color: var(--brand-color);
+        }
+
+        .aist-kb-item-content p {
+            line-height: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid bg-brand fg-white pos-fixed fixed-top z-top">
+    <header data-role="appbar" class="container pos-relative bg-brand fg-white" data-expand-point="md">
+        <a href="/" class="brand no-hover">Pimenov's SHC</a>
+
+        <ul class="app-bar-menu ml-auto">
+            <li><a href="https://aistant.com">Home</a></li>
+            <li><a href="https://aistant.com/login">Login</a></li>
+            <li><a href="https://aistant.com/registration">Sign Up</a></li>
+        </ul>
+    </header>
+</div>
+
+<main>
+    <div class="hero hero-bg add-neb">
+        <div class="container">
+            <div class="text-center p-4 p-20-md">
+                <div class="h1 fg-white">Smart Help Center</div>
+                <p class="text-leader fg-white">
+                    Welcome to knowledge bases from Sergey Pimenov
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">
+
+            <div class="row flex-column flex-justify-center flex-align-center mt-10 mt-20-md">
+                <div class="" id="searchbar-container">
+                    <form action="javascript:" onsubmit="searchFormSubmit(this)">
+                        <input id="aist-search-input"
+                               data-role="input"
+                               placeholder="Search..."
+                               data-search-button="true"
+                               data-baseurl="/metro-4-query/">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row flex-column flex-justify-center flex-align-center mt-4 mb-10 mb-20-md">
+                {{CONTENT}}
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container pt-20 pb-20">
+        <div class="text-center">
+            <ul class="inline-list reduce-1" id="social-menu">
+                <li><a href="#"><span class="mif-facebook"></span></a></li>
+                <li><a href="#"><span class="mif-twitter"></span></a></li>
+                <li><a href="#"><span class="mif-youtube"></span></a></li>
+                <li><a href="#"><span class="mif-github"></span></a></li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-10">
+            <ul class="inline-list reduce-1" id="footer-menu">
+                <li><a href="https://docs.aistant.com/en">Tutorials</a></li>
+                <li><a href="https://aistant.com/subscriptions">Subscriptions</a></li>
+                <li><a href="https://aistant.com/privacy">Privacy Policy</a></li>
+                <li><a href="https://aistant.com/terms">Terms &amp; Conditions</a></li>
+                <li><a href="https://aistant.com/contact">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-10 reduce-1">
+            &copy; 2018-2019 by <a href="https://aistant.com" class="no-wrap">AiSTANT.COM</a>
+            <br>
+            Theme &copy; 2019 by <a href="mailto:sergey@pimenov.com.ua" class="no-wrap">Sergey Pimenov</a>
+            <br>
+            <small>Version <span class="text-bold">2019.1</span></small>
+            <br>
+            Created with <a href="https://metroui.org.ua">Metro 4</a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdn.metroui.org.ua/v4.3.0/js/metro.js"></script>
+<script>
+    $(".aist-kb-item-container").each(function(){
+        var el = $(this);
+        var p = el.find("p");
+        var a = el.find("a");
+        var hr = $("<hr>").addClass("thin bg-brand-hr mt-4").insertAfter(p);
+        $("<a>").attr("href", a.attr("href")).html("Read knowledge base").addClass("mt-2 fg-brand").insertAfter(hr);
+    });
+
+    function searchFormSubmit(f){
+        var action = "https://pimenov.aistant.com/metro-4-query/$s/";
+        var searchVal = f.elements[0].value;
+        $(f).attr("action", action + searchVal);
+    }
+</script>
+</body>
+
+
+</html>
